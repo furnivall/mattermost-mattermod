@@ -31,7 +31,7 @@ jobs:
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=10s --health-retries=10
     steps:
       - name: poc
-        run: echo "hello this is a poc"
+        run: echo "hello this is a poc" && "this is an update to retrigger the build"
       - uses: actions/checkout@v3
       - name: Run tests
         run: make test
